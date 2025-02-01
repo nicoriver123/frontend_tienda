@@ -1,0 +1,7 @@
+.carousel-item img {
+    height: 400px; /* Ajusta la altura de las imágenes si lo necesitas */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  }
+  #main-carousel {
+    margin-top: 50px; /* Ajusta según la distancia que necesites */
+  }

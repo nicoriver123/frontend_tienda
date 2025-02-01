@@ -35,10 +35,10 @@ function Registro() {
       // Manejar la respuesta del backend
       if (response.data.authStatus === 'USER_CREATED_SUCCESSFULLY') {
         setSuccessMessage(response.data.message); // Muestra el mensaje de éxito del backend
-        // Esperar 2 segundos antes de redirigir al login
+        // Esperar 4 segundos antes de redirigir al login
         setTimeout(() => {
           window.location.href = '/login'; // Redirige a la página de login
-        }, 2000);
+        }, 4000);
       } else {
         setError(response.data.message || "No se pudo completar el registro"); // Muestra el mensaje de error del backend
       }

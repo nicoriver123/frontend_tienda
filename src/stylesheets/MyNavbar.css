@@ -1,0 +1,11 @@
+.bg-green {
+    background-color: #148744; /* Verde menta suave */
+    border: none; /* Sin borde predeterminado */
+    color: #ffffff; /* Texto blanco */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  .bg-green:hover {
+    background-color: #57b47b; /* Verde ligeramente más oscuro para el hover */
+    color: #ffffff; /* Asegura el texto blanco */
+  }
