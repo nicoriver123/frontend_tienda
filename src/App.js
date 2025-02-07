@@ -7,6 +7,7 @@ import Registro from './Componentes/Registro';
 import VerificationPage from './Componentes/VerificationPage';
 import Home from './views/Home';
 import Layout from './views/Layout'; // Importar Layout
+import ProductDetail from './views/ProductDetail';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           {/* Rutas dentro del Layout */}
           <Route path="/" element={<Layout />}>
             <Route path="/home" element={<Home />} />
-         
+            <Route path="/producto/:id" element={<ProductDetail />} />
           </Route>
 
           {/* Rutas fuera del Layout */}

@@ -9,3 +9,63 @@
     background-color: #57b47b; /* Verde ligeramente más oscuro para el hover */
     color: #ffffff; /* Asegura el texto blanco */
   }
+  /* Estilos para cada producto dentro del carrito */
+.cart-item {
+  display: flex; /* Alineación en fila */
+  align-items: center; /* Centra verticalmente los elementos */
+  margin-bottom: 15px; /* Espaciado inferior */
+  border-bottom: 1px solid #ddd; /* Línea separadora entre productos */
+  padding-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Imagen del producto en el carrito */
+.cart-item-img {
+  width: 80px; /* Ancho de la imagen */
+  height: 80px; /* Altura de la imagen */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  margin-right: 15px; /* Espacio a la derecha */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Contenedor de los detalles del producto en el carrito */
+.cart-item-details {
+  flex: 1; /* Ocupa el espacio restante */
+}
+
+/* Contenedor para la cantidad del producto */
+.quantity-container {
+  display: flex; /* Distribuye los elementos en fila */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 10px; /* Espacio entre los elementos */
+  margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+/* Estilo del número de cantidad */
+.quantity {
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Contenedor de los productos dentro del carrito */
+.cart-items-container {
+  max-height: 70vh; /* Altura máxima para permitir el desplazamiento */
+  overflow-y: auto; /* Habilita el scroll vertical */
+  padding-bottom: 80px; /* Espacio reservado para la sección del total */
+}
+
+/* Contenedor del total del carrito */
+.cart-total {
+  position: sticky; /* Fija el total en la parte inferior */
+  bottom: 0; /* Se mantiene en la parte inferior del contenedor */
+  background-color: white; /* Fondo blanco para que resalte */
+  padding: 10px; /* Espaciado interno */
+  border-top: 1px solid #ddd; /* Línea separadora con los productos */
+  z-index: 1; /* Asegura que esté por encima de los productos */
+}
+
+/* Estilo del texto que muestra el total */
+.total-text {
+  font-size: 1.2rem; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  margin: 0; /* Elimina márgenes predeterminados */
+}
