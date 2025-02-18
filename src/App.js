@@ -8,6 +8,8 @@ import VerificationPage from './Componentes/VerificationPage';
 import Home from './views/Home';
 import Layout from './views/Layout'; // Importar Layout
 import ProductDetail from './views/ProductDetail';
+import Perfil from './views/Perfil';
+import ProtectedRoute from './Componentes/ProtectedRoute';
 
 function App() {
   return (
@@ -18,6 +20,12 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/home" element={<Home />} />
             <Route path="/producto/:id" element={<ProductDetail />} />
+
+            <Route element={<ProtectedRoute />}>
+            <Route path='/perfil' element={<Perfil />}/>
+
+            
+            </Route>
           </Route>
 
           {/* Rutas fuera del Layout */}

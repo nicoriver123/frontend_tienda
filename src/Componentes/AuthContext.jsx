@@ -8,6 +8,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   // Estado que almacenará los datos del usuario, inicialmente está vacío (sin usuario)
   const [user, setUser] = useState(null);
+  const [isloading, setIsLoading] = useState(true);
 
   // useEffect que se ejecuta una sola vez cuando el componente se monta
   // Intenta cargar los datos del usuario desde localStorage si existen
@@ -16,6 +17,7 @@ export const AuthProvider = ({ children }) => {
     if (storedUser) {
       setUser(JSON.parse(storedUser)); // Si existe, lo parseamos y lo seteamos en el estado
     }
+    setIsLoading(false);
   }, []); // La dependencia vacía asegura que esto se ejecute solo una vez al inicio
 
   // Función para guardar al usuario en el estado y en el localStorage cuando hace login
@@ -33,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     // Proveedor del contexto que pasa los valores del estado y funciones a los componentes hijos
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout , isloading}}>
       {children} {/* Renderiza los componentes hijos que estarán dentro de este proveedor */}
     </AuthContext.Provider>
   );
