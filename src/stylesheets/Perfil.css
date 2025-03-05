@@ -1,0 +1,72 @@
+.mb-4 {
+    max-width: 80%;
+    width: 100%;
+}
+
+.row .col-lg-8{
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.row .col-lg-4{
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.container{
+    max-width: 1400px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.col-sm-9{
+    flex: 1;
+    max-width: calc(100% - 120px );
+}
+
+@media (max-width: 992px){
+    .row .col-lg-8,
+    .row .col-lg-4{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.profile-avatar-image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-image.container{
+    position: relative;
+    display: inline-block;
+}
+
+.profile-camera-icon{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--bs-primary);
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.profile-camera-icon:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.profile-file-input{
+    display: none;
+}
+
+.profile-camera-label{
+    cursor: pointer;
+    margin:9;
+}
